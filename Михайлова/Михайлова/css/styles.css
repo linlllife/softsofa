@@ -1,0 +1,437 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    display: flex; /* Применяем flexbox к header */
+    justify-content: space-between; /* Распределяем элементы по краям: логотип слева, навигация справа */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Добавляем, чтобы nav мог позиционироваться относительно header */
+}
+.logo {
+    display: flex; /* Применяем flexbox к .logo */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    gap: 10px; /* Добавляем отступ между картинкой логотипа и названием */
+    width: 300px;
+    margin-right: 20px; /* Добавляем отступ справа к .logo */
+}
+
+.logo img {
+    width: auto; /* Убираем ограничение по ширине */
+    max-width: 100px; /* Устанавливаем максимальную ширину для логотипа */
+    height: auto; /* Убираем ограничение по высоте */
+    /*margin-right: 10px;*/
+}
+header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    gap: 200px;
+}
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; /* Применяем flexbox к nav */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    gap: 15px; /* Добавляем отступ между ссылками */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+main {
+    padding: 40 20px;
+}
+.banner {
+    position: relative;
+    width: 1201px;
+    height: 758px;
+    background-color: #F4F0EC;
+    border-radius: 70px;
+    overflow: hidden;
+}
+
+.banner-background img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-content {
+    position: absolute;
+    top: 208px;
+    left: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.banner-content h1 {
+    color: #292F36;
+    font-size: 65px;
+    font-family: Rosario;
+    font-weight: 400;
+    line-height: 81.25px;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 26px 48px;
+    background-color: #292F36;
+    border-radius: 18px;
+    box-shadow: 0px 10px 20px rgba(192.31, 192.31, 192.31, 0.35);
+    color: white;
+    font-size: 24px;
+    font-family: Jost;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.48px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-icon {
+    display: inline-block;
+    width: 15.14px;
+    height: 13.18px;
+    border: 2px #CDA274 solid;
+}
+
+.services, .contacts, .news, .reviews {
+    margin-bottom: 40px;
+    background-color: #fff;   
+    padding: 20px;   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+.services ul, .contacts address {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news article { 
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-moto {
+    color: #4D5053;
+    font-size: 22px;
+    font-family: Jost;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.22px;
+}
+
+.footer-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.footer-text {
+    color: #292F36;
+    font-size: 25px;
+    font-family: DM Serif Display;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.footer-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-card li {
+    margin-bottom: 5px;
+}
+
+address {
+    font-style: normal;
+}
+.reviews {
+    padding: 50px 0;
+    background-color: #F4F0EC;
+    border-radius: 70px;
+    overflow: hidden; /* Добавим это свойство, чтобы контент не выходил за пределы блока */
+}
+
+.reviews-content {
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 24px;
+    position: relative; /* Добавим это свойство, чтобы контент был поверх фонового блока */
+    z-index: 1; /* Установим z-index выше, чем у фонового блока */
+}
+
+h2 {
+    color: #292F36;
+    font-size: 2rem; /* Изменим размер шрифта на относительное значение */
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 40px;
+}
+
+.review-card p {
+    font-size: 1rem; /* Изменим размер шрифта на относительное значение */
+    color: #4D5053;
+    margin-bottom: 15px;
+}
+
+.review-card cite {
+    font-size: 1.1rem; /* Изменим размер шрифта на относительное значение */
+    color: #292F36;
+    font-style: normal;
+}
+.review-card img {
+    width: 100px; /* Устанавливаем фиксированный размер для изображений */
+    height: 100px;
+    border-radius: 50%; /* Делаем изображения круглыми */
+    object-fit: cover; /* Это свойство гарантирует, что изображение будет масштабироваться, сохраняя свои пропорции */
+    margin-right: 20px; /* Добавляем отступ справа, чтобы текст не прилипал к изображению */
+}
+.review-card {
+    display: flex; /* Используем flexbox для выравнивания элементов горизонтально */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    justify-content: start; /* Выравниваем элементы по горизонтали слева */
+    margin-bottom: 30px; /* Добавляем отступ снизу между блоками отзывов */
+}
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 75px;
+}
+
+.about-text {
+    width: 472px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    font-family: 'DM Serif Display', serif;
+    color: #292F36;
+    line-height: 62.50px;
+    letter-spacing: 1px;
+}
+
+.call-info {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-container {
+    position: relative;
+    width: 93px;
+    height: 93px;
+}
+
+.circle-background {
+    width: 93px;
+    height: 93px;
+    background: #F4F0EC;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle-icon {
+    width: 32px;
+    height: 32px;
+    border: 2px #CDA274 solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.call-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.call-number {
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    color: #4D5053;
+}
+
+.call-description {
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    color: #4D5053;
+}
+
+.evaluation-button {
+    padding: 26px 40px;
+    background: #292F36;
+    color: white;
+    font-size: 22px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    border-radius: 18px;
+    box-shadow: 0px 10px 20px rgba(192.31, 192.31, 192.31, 0.35);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.evaluation-button:hover {
+    background: #CDA274;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    max-width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.contacts {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contacts h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contacts address {
+    font-style: normal;
+}
+
+.contacts a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contacts a:hover {
+    color: #CDA274;
+}
+
+.news {
+    padding: 20px;
+    background-color: #f4f0ec;
+}
+
+.news h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news article {
+    margin-bottom: 15px;
+}
+
+.news article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.our-projects {
+    padding: 20px;
+    background-color: #f4f0ec;
+}
+
+.our-projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-info {
+    width: 50%;
+    padding: 10px;
+}
+
+.project img {
+    width: 50%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.about-company, .our-services, .client-reviews {
+    padding: 20px;
+    background-color: #f4f0ec;
+    margin-bottom: 20px;
+}
+
+.about-company h2, .our-services h2, .client-reviews h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.portfolio, .faq, .shop {
+    padding: 20px;
+    background-color: #f4f0ec;
+    margin-bottom: 20px;
+}
+
+.portfolio h2, .faq h2, .shop h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}

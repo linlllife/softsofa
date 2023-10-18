@@ -1,0 +1,31 @@
+.uslugi {
+    padding: 20px;
+    background-color: #f4f0ec;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.services-list li {
+    width: calc(33.33% - 20px); /* Ширина каждой услуги с учетом отступов */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-list h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.services-list p {
+    font-size: 16px;
+}

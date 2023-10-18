@@ -1,0 +1,74 @@
+.portfolio {
+    padding: 20px;
+    background-color: #f4f0ec;
+    margin-bottom: 20px;
+}
+
+.portfolio h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.portfolio p {
+    text-align: center;
+}
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Это свойство предотвратит выход содержимого за пределы контейнера */
+    display: flex;
+    justify-content: space-between; /* Распределите содержимое равномерно */
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Выравнивание элементов по центру */
+    width: calc(50% - 10px); /* Ширина каждого проекта, учитывая отступ */
+}
+
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    order: 2; /* Перемещаем изображение вниз */
+    margin-top: 20px; /* Отступ сверху для изображения */
+}
+
+.project h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    order: 1;
+}
+
+.project p {
+    font-size: 16px;
+    order: 3; /* Перемещаем описание ниже изображения */
+    flex: 1; /* Занимает все доступное пространство */
+    text-align: right; /* Выравнивание текста справа */
+}
+
+.project a {
+    color: #CDA274;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    order: 4; /* Перемещаем ссылку в самый низ */
+    margin-top: 20px; /* Отступ сверху для ссылки */
+}
+
+.project a:hover {
+    color: #292F36;
+}
